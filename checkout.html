@@ -1,0 +1,170 @@
+<!-- checkout.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- toastify js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.min.js"
+        integrity="sha512-0Yc4Jv5wX4+mjDuLxmHFGqgDtMFAEBLpPq/0nPVmAOwHPMkYXiS1YVYWTcrVQztftk/32089DDTyrCJO8hBCZw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title>Checkout</title>
+    <link rel="stylesheet" href="./css/style.css"> <!-- Add your CSS file -->
+</head>
+
+<style>
+    body {
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    .img-fluid{
+        width: 30%;
+    }
+
+    .total-price{
+        background: #dd3333;
+        color: #f4f4f4;
+        padding: 10px 12px;
+        width: 100%;
+        text-align: center;
+        margin: 0px auto;
+        display: block;
+    }
+
+    .cart-item {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .item-details {
+        flex: 1;
+    }
+
+    .item-price {
+        font-weight: bold;
+        color: #333;
+    }
+
+    /* form {
+        margin-top: 20px;
+    } */
+    #checkout-form{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .total {
+        font-size: 1.2em;
+        margin-top: 20px;
+        text-align: right;
+    }
+
+    #checkout-cart-items {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        border-radius: 4px;
+        text-align: center;
+        width: 50%;
+        margin: 0px auto;
+        padding: 20px;
+        background: #f4f4f4;
+    }
+    .form-control{
+        width: 100%;
+    }
+    .product{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+</style>
+
+<body>
+    <h1>Checkout</h1>
+    <div class="contianer">
+        <div class="row">
+    <div class="col-12 col-md-6">
+    <form id="checkout-form">
+        <form class="row g-3">
+            <div class="col-md-12 mt-3">
+              <label for="inputEmail4" class="form-label"> <i class="fa fa-envelope"></i> Email</label>
+              <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-12 mt-3">
+              <label for="inputPassword4" class="form-label"> <i class="fa-solid fa-lock"></i> Password</label>
+              <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-12 mt-3">
+              <label for="inputAddress" class="form-label"> <i class="fa fa-address-card-o"></i> Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="col-12 mt-3">
+              <label for="inputAddress2" class="form-label"> <i class="fa fa-address-card-o"></i> Address 2</label>
+              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-4 mt-3">
+              <label for="inputCity" class="form-label"> <i class="fa fa-institution"></i> City</label>
+              <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4 mt-3">
+              <label for="inputState" class="form-label">State</label>
+              <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option>Punjab</option>
+                <option>Sindh</option>
+                <option>Balochistan</option>
+                <option>KPK</option>
+              </select>
+            </div>
+            <div class="col-md-4 mt-3">
+              <label for="inputZip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="inputZip">
+            </div>
+            <div class="col-12 mt-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary w-100 mt-4">Confirm Purchse</button>
+            </div>
+          </form>
+    </form>
+</div>
+<div id="checkout-cart-items" class="col-12 col-md-6">
+
+</div>
+
+</div>
+</div>
+
+
+    <!-- Fontawesome Code -->
+    <script src="https://kit.fontawesome.com/6a2acfaa82.js" crossorigin="anonymous"></script>
+
+      <!-- toastify js -->
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+
+     <!-- bootstrap-js -->
+     <script src="./bootstrap-5.3.3-dist (3)/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+
+    <script src="./script/checkout.js"></script> <!-- Add your JS file -->
+</body>
+
+</html>

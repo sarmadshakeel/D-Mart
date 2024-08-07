@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- toastify js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.min.js"
+        integrity="sha512-0Yc4Jv5wX4+mjDuLxmHFGqgDtMFAEBLpPq/0nPVmAOwHPMkYXiS1YVYWTcrVQztftk/32089DDTyrCJO8hBCZw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Cart || Html</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid navba-Style">
+            <div class="row bg-light">
+                <div class="col-12 d-flex justify-content-between align-items-center">
+                    <div class="site-logo">
+                        <img src="./images/logo-2.png" style="width: 20%;" alt="">
+                    </div>
+
+                    <div class="icons d-flex">
+                        <!-- <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-circle-user"></i> -->
+                        <li class="nav-item list-unstyled border border-dark rounded-pill" id="backTo">
+                            <a class="nav-link text-dark" href="./home.html">Back to Products</a>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./home.html">Back to Products</a>
+                </li>
+            </ul>
+        </div>
+    </nav> -->
+    <main>
+        <div class="container mt-5 mx-auto text-center ">
+            <h1>Your Cart</h1>
+            <div class="price-btn">
+                <p id="total-price" class="mb-0"></p>
+                <p id=""></p>
+                <button type="button" class="btn btn-primary mt-2+" id="purchase-btn">Purchase</button>
+            </div>
+            <div id="cart-items" class="row mt-4"></div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container-fluid  mt-5">
+            <div class="row pt-3">
+                <div class="col-12 col-md-8">
+                    <div class="img-desc">
+                        <img src="./images/logo (2).png" alt="">
+                        <p>Integer ut ligula quis lectus fringilla elementum porttitor sed est.
+                            Duis fringilla efficitur ligula sed lobortis.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <div class="timing">
+                        <ul>
+                            <h2>Openning Time</h2>
+                            <li>Monday – Saturday</li>
+                            <li>7:00 – 22:00</li>
+                            <li>Sunday</li>
+                            <li>9:00 – 20:00</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <div class="contact">
+                        <ul>
+                            <h2>Contact Info</h2>
+                            <li><i class="fa-solid fa-phone"></i>(+612) 2531 5600</li>
+                            <li><i class="fa-solid fa-envelope"></i>info@la-studioweb.com</li>
+                            <li><i class="fa-solid fa-location-dot"></i>Get direction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+
+            <div class="row mt-3">
+                <span class="border-bottom"></span>
+                <div class="col-12 col-md-5">
+                    <div class="logos">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-pinterest-p"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-behance"></i>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="reserved">
+                        <p>© 2018 ZUKA All rights reserved</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <div class="payement">
+                        <img src="./images/payments2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <script>
+       document.addEventListener("DOMContentLoaded", () => {
+
+    function calculateTotalPrice(product) {
+        return product.quantity * product.price;
+    }
+
+    function showCart() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartItems = document.getElementById('cart-items');
+        cartItems.innerHTML = '';
+
+        if (cart.length === 0) {
+            cartItems.innerHTML = '<p class="text-center d-block mx-auto">Your cart is empty!</p>';
+            document.getElementById('total-price').textContent = '';
+            return;
+        }
+
+        let totalPrice = 0;
+
+        cart.forEach(product => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'cart-item mb-3 border border-2 border-black rounded mx-auto py-3';
+            itemDiv.innerHTML = `
+                <div class="col-4 m-auto">
+                    <img src="${product.image}" class="img-fluid" alt="${product.name}">
+                </div>
+                <div class="col-4 m-auto">
+                    <h5>${product.name}</h5>
+                    <p class="text-warning">$${product.price}</p>
+                    <div class="">
+                        <button class="btn btn-sm btn-danger decrease-quantity" data-id="${product.id}">-</button>
+                        <span class="mx-2">${product.quantity}</span>
+                        <button class="btn btn-sm btn-primary increase-quantity" data-id="${product.id}">+</button>
+                        <p>Total: $${calculateTotalPrice(product).toFixed(2)}</p>
+                        <button class="btn btn-sm btn-danger remove-product" data-id="${product.id}">Remove</button>
+                    </div>
+                </div>
+            `;
+            cartItems.appendChild(itemDiv);
+            totalPrice += calculateTotalPrice(product);
+        });
+
+        // Display total price for all items
+        document.getElementById('total-price').textContent = `Total Price: $${totalPrice.toFixed(2)}`;
+
+        document.querySelectorAll('.decrease-quantity').forEach(button => {
+            button.addEventListener('click', changeQuantity);
+        });
+        document.querySelectorAll('.increase-quantity').forEach(button => {
+            button.addEventListener('click', changeQuantity);
+        });
+        document.querySelectorAll('.remove-product').forEach(button => {
+            button.addEventListener('click', removeProduct);
+        });
+    }
+
+    function changeQuantity(event) {
+        const button = event.target;
+        const id = button.dataset.id;
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const product = cart.find(item => item.id === id);
+        if (button.classList.contains('decrease-quantity')) {
+            if (product.quantity > 1) {
+                product.quantity--;
+                Toastify({
+                    text: "Quantity decreased!",
+                    duration: 2000,
+                    close: true,
+                    gravity: "top",
+                    position: "right",
+                    stopOnFocus: true,
+                    style: {
+                        background: "red",
+                    },
+                }).showToast();
+            }
+        } else if (button.classList.contains('increase-quantity')) {
+            product.quantity++;
+            Toastify({
+                text: "Quantity increased!",
+                duration: 2000,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                    background: "green",
+                },
+            }).showToast();
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        showCart();
+    }
+
+    function removeProduct(event) {
+        const button = event.target;
+        const id = button.dataset.id;
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        cart = cart.filter(item => item.id !== id);
+        Toastify({
+            text: "Product removed!",
+            duration: 2000,
+            close: true,
+            gravity: "top",
+            position: "right",
+            stopOnFocus: true,
+            style: {
+                background: "red",
+            },
+        }).showToast();
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        showCart();
+    }
+
+    function purchaseProducts() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        if (cart.length === 0) {
+            Toastify({
+                text: "Your cart is empty!",
+                duration: 2000,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                },
+            }).showToast();
+            return;
+        }
+
+        // Redirect to checkout page
+        window.location.href = 'checkout.html';
+    }
+
+    showCart();
+    document.getElementById('purchase-btn').addEventListener('click', purchaseProducts);
+});
+
+
+
+    </script>
+
+
+
+    <!-- Fontawesome Code -->
+    <script src="https://kit.fontawesome.com/6a2acfaa82.js" crossorigin="anonymous"></script>
+
+    <!-- toastify js -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+
+    <script src="./bootstrap-5.3.3-dist (3)/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

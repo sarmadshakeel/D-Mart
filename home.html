@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- toastify-css -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.min.js"
+    integrity="sha512-0Yc4Jv5wX4+mjDuLxmHFGqgDtMFAEBLpPq/0nPVmAOwHPMkYXiS1YVYWTcrVQztftk/32089DDTyrCJO8hBCZw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>D-MART</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header class="sticky-top">
+
+
+        <div class="container-fluid">
+            <div class="row bg-light">
+                <div class="col-12 d-flex justify-content-between align-items-center">
+                    <div class="site-logo">
+                        <img src="./images/logo-2.png"
+                            style="width: 20%;" alt="">
+                    </div>
+                    <div class="icons d-flex">
+                        <i class="fa-regular fa-heart"></i>
+                        <div class="drop-user">
+                        <i class="fa-regular fa-circle-user"></i>
+                        <div class="user-list">
+                            <ul>
+                                <li><a href="">MyAccount</a></li>
+                                <li><a href="">Tracking Order</a></li>
+                                <li><a href="">Campare</a></li>
+                                <li><a href="">Whishlist</a></li>
+                                <li><a href="">Lost Password</a></li>
+                            </ul>
+                        </div>
+                        </div>
+                            <a  href="./cart.html" ><span class="total-count"></span><i class="fa-solid fa-cart-plus text-dark"></i></a>  
+                        <!-- </button> -->
+                        <!-- <div class="total">
+                            <span class="total-count"></span>
+                        </div> -->
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                </nav>
+            </div>
+
+                <div class="second-row row">
+                    <div class="col-12 col-md-6">
+                        <ul class="first-list">
+                            <li><a href="">Home</a></li>
+
+                            <div class="dropdown">
+                                <li><a href="">Shop</a></li>
+                            <div class="dropdown-content">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <ul class="drop-1 mx-4 mt-3">
+                                            <h4>ShopLayout</h4>
+                                            <hr>
+                                            <li><a href="#">FullWidth</a></li>
+                                            <li><a href="#">WithSideBars</a></li>
+                                            <li><a href="#">TwoColumns</a></li>
+                                            <li><a href="#">ThreeColumns</a></li>
+                                            <li><a href="#">WithCollections</a></li>
+                                            <li><a href="#">ShopInstagram</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3">
+                                        <ul class="drop-2 mx-4 mt-3">
+                                            <h4>ProductLayout</h4>
+                                            <hr>
+                                            <li><a href="#">Simple01</a></li>
+                                            <li><a href="#">Simple02</a></li>
+                                            <li><a href="#">StickyInfo</a></li>
+                                            <li><a href="#">ThumbNailGallery</a></li>
+                                            <li><a href="#">SideBar</a></li>
+                                            <li><a href="#">Grouped</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3">
+                                        <ul class="drop-3 mx-4 mt-3">
+                                            <h4>ShopPages</h4>
+                                            <hr>
+                                            <li><a href="#">MyAccount</a></li>
+                                            <li><a href="#">ShoppingCart</a></li>
+                                            <li><a href="#">CheckOut</a></li>
+                                            <li><a href="#">Whishlist</a></li>
+                                            <li><a href="#">OrderTracking</a></li>
+                                            <li><a href="#">Campare</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="image-link">
+                                            <img src="https://dmartpakistan.com/wp-content/uploads/2018/11/header-banner.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="page-dropdown">
+                            <li><a href="">Pages</a></li>
+                            <div class="page-list">
+                                <ul>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Our Teams</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">404 Page</a></li>
+                                    <li><a href="#">FAQS Page</a></li>
+                                    <li><a href="#">Coming Soon</a></li>
+                                </ul>
+                            </div>
+                            </div>
+                            <li><a href="">Collection</a></li>
+                            <div class="blog-dropdown">
+                            <li><a href="">Blog</a></li>
+                            <div class="blog-list">
+                                <ul>
+                                    
+                                    <li><a href="#">Blog Grid</a><i class="fas fa-caret-right"></i></li>
+                                    
+                                    <div class="dropdown-menu-1">
+                                        <ul>
+                                          <li><a href="#">Team-1</a></li>
+                                          <li><a href="#">Team-2</a></li>
+                                          <li><a href="#">Team-3</a></li>
+                                          <li><a href="#">Team-4</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <li><a href="#">Blog List</a><i class="fas fa-caret-right"></i></li>
+                                    
+                                    <li><a href="#">Blog Masonry</a><i class="fas fa-caret-right"></i></li>
+                                    
+                                    <li><a href="#">Single Post</a><i class="fas fa-caret-right"></i></li>
+                                    
+                                </ul>
+                            </div>
+                            </div>
+                            <li><a href="">New Look</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <ul class="second-list">
+                            <li>
+                                <div class="language-drop">
+                                <i class="fa-solid fa-language text-light"></i>
+                                <a href="">English</a>
+                                <i class="fa-solid fa-caret-down text-light"></i>
+                                <div class="language-list">
+                                    <ul>
+                                        <li>Germany</li>
+                                        <li>France</li>
+                                        <li>Urdu</li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="currency-drop">
+                                <i class="fa-solid fa-dollar-sign text-light"></i>
+                                <a href="">Currency</a>
+                                <div class="currency-list">
+                                    <ul>
+                                        <li>USD</li>
+                                        <li>PKR</li>
+                                        <li>EUR</li>
+                                    </ul>
+                                </div>
+                                <i class="fa-solid fa-caret-down text-light"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-comment text-light"></i>
+                                <a href="">Help & FAQS</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            <!-- Original second row hidden on smaller screens -->
+        </div>
+
+
+    </header>
+
+
+    <main>
+
+
+        <div class="container-fluid">
+            <div class="main-images row">
+                <div class="col-12 col-md-4 px-0 mb-4 text-center">
+                    <div class="banner-1 card text-bg-dark">
+                        <img src="./images/banner-1.png" class="card-img" alt="...">
+                        <div class="banner-1-text card-img-overlay">
+                            <h2 class="card-title text-center text-light">e Cigrette</h2>
+                            <p class="card-text text-light">available now</p>
+                            <a href="#">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 px-0 mb-4">
+                    <div class="banner-2 card">
+                        <img src="./images/banner-2.png" class="card-img" alt="...">
+                        <div class="banner-2-text card-img-overlay">
+                            <p class="card-text text-light ">Brand Perfume</p>
+                            <h2 class="card-title  text-light">Sale 40%</h2>
+                            <a href="#">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 px-0">
+                    <div class="banner-3 card text-bg-dark">
+                        <img src="./images/banner-3.png" class="card-img" alt="...">
+                        <div class="banner-3-text text-center card-img-overlay">
+                            <p class="card-text text-light">Men's Ultra-Thin Quartz Analog</p>
+                            <h2 class="card-title">off 20%</h2>
+                            <h4 class="card-text">$199.99 <br>
+                                <span class="text-light">only 89.99</span>
+                            </h4>
+                            <a href="#">Shop Now</a>
+                        </div>
+                    </div>
+                    <div class="banner-4 card text-bg-dark">
+                        <img src="./images/banner-4.png" class="card-img" alt="...">
+                        <div class="banner-4-text text-center card-img-overlay">
+                            <p class="card-text text-black">Rivet Clover Modern Glam Velvet Brass Arm Accent Chair</p>
+                            <h2 class="card-title text-black">Sale 50%</h2>
+                            <span class="text-black">only $199.99</span> <br>
+                            <a href="#">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid  mt-5">
+            <div class="row">
+                <div class="shipping col-12 col-md-3  text-center mb-4">
+                    <i class="fa-solid fa-truck"></i>
+                    <h4 class="pt-4">Free Worldwide Shipping</h4>
+                    <p>On all orders over $75.00</p>
+                </div>
+                <div class="timing col-12 col-md-3 text-center mb-4">
+                    <i class="fa-regular fa-clock"></i>
+                    <h4 class="pt-4">Support 24/7</h4>
+                    <p>Contact us 24 hours a day, 7 days a week</p>
+                </div>
+                <div class="return col-12 col-md-3 text-center mb-4">
+                    <i class="fa-solid fa-person-walking-arrow-loop-left"></i>
+                    <h4 class="pt-4">30 Days Return</h4>
+                    <p>Return it within 30 days for an exchange</p>
+                </div>
+                <div class="secure col-12 col-md-3 text-center mb-4">
+                    <i class="fa-solid fa-house-lock"></i>
+                    <h4 class="pt-4">100% Payment Secure</h4>
+                    <p>We ensure secure payment with PEV</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="carousel1 col mb-4">
+                    <div class="carousel-text py-2 border border-light w-100">
+                        <div class="items d-flex align-items-center pt-4">
+                            <i class="fa-solid fa-bolt"></i>
+                            <h3>Deal Of Day</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel col-12 col-md-6 mx-2 pb-2">
+                    <div class="heading d-flex pt-5 align-items-center px-2">
+                        <i class="fa-solid fa-bolt"></i>
+                        <h2>Best Seller</h2>
+                    </div>
+                    <div class="carousel-1-text card text-bg-dark">
+                        <img src="./images/carousel1.png" class="card-img" alt="...">
+                        <div class="carousel1-text text-center card-img-overlay">
+                            <p class="card-text text-black">5-Piece Bed-In-A-Bag – Twin/Twin Extra Long, Purple Floral
+                            </p>
+                            <span>$36.00</span>
+                            <div class="rating">
+                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5"
+                                    title="5 stars">☆</label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4"
+                                    title="4 stars">☆</label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3"
+                                    title="3 stars">☆</label>
+                                <input type="radio" id="star2" name="rating" value="2" /><label for="star2"
+                                    title="2 stars">☆</label>
+                                <input type="radio" id="star1" name="rating" value="1" /><label for="star1"
+                                    title="1 star">☆</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="container-fluid">
+            <div class="row pt-5 d-flex align-items-center">
+                <div class="col-12 col-md-6 w-100">
+                    <div class="tag1 bg-info" style="background-color: #17a2b8; width: 70%; padding: 10px; white-space: nowrap;">
+                        <h2>Cell Phones & Accessories</h2>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="card">
+                                        <img src="./images/item-1.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Card title</h5>
+                                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="card">
+                                        <img src="./images/item-2.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Card title</h5>
+                                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="card">
+                                        <img src="./images/item-3.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Card title</h5>
+                                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="card">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Card title</h5>
+                                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="card">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Card title</h5>
+                                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="card">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Card title</h5>
+                                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="card">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Card title</h5>
+                                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="card">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Card title</h5>
+                                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="card">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Card title</h5>
+                                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-6"></div>
+                <div class="col-12 col-md-6"></div>
+            </div>
+        </div> -->
+
+
+        <div class="container-fluid">
+            <div class="row pt-5 d-flex align-items-center">
+                <div class="col-12 col-md-4 w-100">
+                    <div class="tag1 bg-info"
+                        style="background-color: #17a2b8; width: 100%; padding: 10px; white-space: nowrap;">
+                        <h2>Cell Phones & Accessories</h2>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="tabs-link d-flex align-items-center justify-content-between">
+                        <ul class="nav nav-tabs border-bottom-0" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="tabs-btn nav-link active bg-transparent border border-0" id="home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#home-tab-pane" type="button" role="tab"
+                                    aria-controls="home-tab-pane" aria-selected="true">New Products</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="tabs-btn nav-link mx-5 bg-transparent border border-0" id="profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">On Sale</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="tabs-btn nav-link bg-transparent border border-0" id="contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                    aria-controls="contact-tab-pane" aria-selected="false">Top Sellers</button>
+                            </li>
+                        </ul>
+                        <a href="#" class="border border-dark rounded-pill py-3 px-4 text-black">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                            <div class="row" id="home-products"></div>
+                        </div>
+                        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                            <div class="row" id="profile-products"></div>
+                        </div>
+                        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                            <div class="row" id="contact-products"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cartModalLabel">Cart</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="cart-items"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="purchase-btn">Purchase</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+
+        <!-- <div class="container-fluid">
+            <div class="row pt-5 d-flex align-items-center">
+                <div class="col-12 col-md-4 w-100">
+                    <div class="tag1 bg-info"
+                        style="background-color: #1c34ae  !important; width: 100%; padding: 10px; white-space: nowrap;">
+                        <h2>Electronis & Tech</h2>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="tabs-link d-flex align-items-center justify-content-between">
+                        <ul class="nav nav-tabs border-bottom-0" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="tabs-btn nav-link active bg-transparent border border-0" id="new-tab" data-bs-toggle="tab"
+                                    data-bs-target="#new-tab-pane" type="button" role="tab"
+                                    aria-controls="new-tab-pane" aria-selected="true"  onclick="filterProducts('isNew')">New Products</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="tabs-btn nav-link mx-5 bg-transparent border border-0" id="sail-tab" data-bs-toggle="tab"
+                                    data-bs-target="#sail-tab-pane" type="button" role="tab"
+                                    aria-controls="sail-tab-pane" aria-selected="false" onclick="filterProducts('onSail')">On Sale</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="tabs-btn nav-link bg-transparent border border-0" id="seller-tab" data-bs-toggle="tab"
+                                    data-bs-target="#seller-tab-pane" type="button" role="tab"
+                                    aria-controls="seller-tab-pane" aria-selected="false" onclick="filterProducts('topSeller')">Top Sellers</button>
+                            </li>
+                        </ul>
+                        <a href="#" class="border border-dark rounded-pill py-3 px-4 text-black">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="new-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                            <div class="row" id="new-products"></div>
+                        </div>
+                        <div class="tab-pane fade" id="sail-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                            <div class="row" id="sail-products"></div>
+                        </div>
+                        <div class="tab-pane fade" id="seller-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                            <div class="row" id="seller-products"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-12 col-md-6">
+                    <div class="first-card card text-bg-dark mb-4">
+                        <img src="./images/banner_11.jpg" class="card-img"  alt="...">
+                        <div class="first-card-text card-img-overlay">
+                          <h2 class="card-title text-light">NEW NOW</h2>
+                          <p class="card-text text-light">Foxnovo Bluetooth Soundbar 20W Wired & Wireless Home Theater</p>
+                          <a href="#">Shop Now</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="second-card card text-bg-dark mb-4">
+                        <img src="./images/banner_10.jpg" class="card-img" alt="...">
+                        <div class="second-card-text card-img-overlay">
+                          <h2 class="card-title text-black">SALE 40%</h2>
+                          <p class="card-text">Wireless Charger Qi-Certified, Yootech 7.5W Wireless</p>
+                          <a href="#">Shop Now</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="container-fluid  mt-5">
+            <div class="row pt-3">
+                <div class="col-12 col-md-8">
+                    <div class="img-desc">
+                        <img src="./images/logo (2).png" alt="">
+                        <p>Integer ut ligula quis lectus fringilla elementum porttitor sed est. 
+                            Duis fringilla efficitur ligula sed lobortis.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <div class="timing">
+                        <ul>
+                            <h2>Openning Time</h2>
+                            <li>Monday – Saturday</li>
+                            <li>7:00 – 22:00</li>
+                            <li>Sunday</li>
+                            <li>9:00 – 20:00</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <div class="contact">
+                        <ul>
+                            <h2>Contact Info</h2>
+                            <li><i class="fa-solid fa-phone"></i>(+612) 2531 5600</li>
+                            <li><i class="fa-solid fa-envelope"></i>info@la-studioweb.com</li>
+                            <li><i class="fa-solid fa-location-dot"></i>Get direction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+            
+            <div class="row mt-3">
+                <span class="border-bottom"></span>
+                <div class="col-12 col-md-5">
+                    <div class="logos">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-pinterest-p"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-behance"></i>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="reserved">
+                    <p>© 2018 ZUKA All rights reserved</p>
+                </div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <div class="payement">
+                        <img src="./images/payments2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+
+
+    <!-- Fontawesome Code -->
+    <script src="https://kit.fontawesome.com/6a2acfaa82.js" crossorigin="anonymous"></script>
+    <!-- bootstrap-js -->
+    <script src="./bootstrap-5.3.3-dist (3)/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+      <!-- toastify js -->
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" /><!-- toastify js -->
+    
+
+
+    <script src="./script/script.js"></script>
+
+
+</body>
+
+</html>
