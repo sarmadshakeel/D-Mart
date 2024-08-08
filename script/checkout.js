@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (cart.length === 0) {
             setTimeout(() => {
                 window.location.href = 'home.html'; // Replace with your home page
-            }); // Redirect after 2 seconds
+            }); 
         }
     }
     

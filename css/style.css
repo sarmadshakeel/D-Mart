@@ -893,3 +893,7 @@ in blog dropdown inside it grid-drop */
 
 /* checkout-pages design */
 
+.price{
+    font-size: 15px;
+    display: flex;
+}
