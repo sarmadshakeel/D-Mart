@@ -102,14 +102,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('checkout-form').addEventListener('submit', function(event) {
         event.preventDefault();
         let email = document.getElementById('inputEmail4').value;
-        let password = document.getElementById('inputName4').value;
+        let name = document.getElementById('inputName4').value;
         let address = document.getElementById('inputAddress').value;
         let address2 = document.getElementById('inputAddress2').value;
         let city = document.getElementById('inputCity').value;
         let state = document.getElementById('inputState').value;
         let zip = document.getElementById('inputZip').value;
         
-        if (!email || !password || !address || !address2 || !city || !state || !zip) {
+        if (!email || !name || !address || !address2 || !city || !state || !zip) {
             Toastify({
                 text: "Please fill in all required fields!",
                 duration: 3000,
@@ -122,8 +122,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const userData = {
+            name: name,
             email: email,
-            password: password,
             address: address,
             address2: address2,
             city: city,
