@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <button class="btn btn-danger mt-3 remove" data-id="${product.id}">Remove</button>
                 </div>
                 <p class="total-price">Total: $${(product.price * product.quantity).toFixed(2)}</p>
+                
             </div>    
             `;
             checkoutCartItems.appendChild(itemDiv);
