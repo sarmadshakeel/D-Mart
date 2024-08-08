@@ -30,7 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     <button class="btn btn-secondary increase border-0 rounded-circle" data-id="${product.id}">+</button>
                     <button class="btn btn-danger my-3 remove" data-id="${product.id}">Remove</button>
                 </div>
+                <div class="col-12 col-md-12">
                 <p class="total-price ">Total: $${(product.price * product.quantity).toFixed(2)}</p>
+                </div>
             </div>    
             `;
             checkoutCartItems.appendChild(itemDiv);
@@ -115,10 +117,9 @@ document.addEventListener("DOMContentLoaded", () => {
         let address = document.getElementById('inputAddress').value;
         let address2 = document.getElementById('inputAddress2').value;
         let city = document.getElementById('inputCity').value;
-        let state = document.getElementById('inputState').value;
-        let zip = document.getElementById('inputZip').value;
         
-        if (!email || !name || !address || !address2 || !city || !state || !zip) {
+        
+        if (!email || !name || !address || !address2 || !city) {
             Toastify({
                 text: "Please fill in all required fields!",
                 duration: 3000,
@@ -136,8 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
             address: address,
             address2: address2,
             city: city,
-            state: state,
-            zip: zip,
+          
         };
 
         localStorage.setItem('userData', JSON.stringify(userData));
