@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <input type="radio" id="star4-${product.id}" name="rating-${product.id}" value="4" /><label for="star4-${product.id}" title="4 stars">☆</label>
                             <input type="radio" id="star5-${product.id}" name="rating-${product.id}" value="5" /><label for="star5-${product.id}" title="5 stars">☆</label>
                         </div>
-                        <p class="price d-block text-center">${product.price}</p>
+                        <p class="price text-center d-block">${product.price}</p>
                         <p class="card-text text-center">${product.description}</p>
                     </div>
                     <div class="elements">

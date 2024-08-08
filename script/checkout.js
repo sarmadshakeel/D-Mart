@@ -1,13 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
     const checkoutCartItems = document.getElementById('checkout-cart-items');
+    const totalPriceElement = document.getElementById('total-price'); // Make sure this element exists in your HTML
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     const updateCartDisplay = () => {
         checkoutCartItems.innerHTML = ''; // Clear existing items
         if (cart.length === 0) {
             checkoutCartItems.innerHTML = '<p>Your cart is empty!</p>';
+            totalPriceElement.textContent = 'Total Price: $0.00'; // Reset total price
             return;
         }
+
+        let totalPrice = 0; // Initialize total price
 
         cart.forEach(product => {
             const itemDiv = document.createElement('div');
@@ -18,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div class="col-12 col-md-4 d-flex justify-content-between align-items-center">
                     <h5 class="d-flex align-items-center">${product.name}</h5>
-                    <p class="mx-5 mb-0 align-items-center text-warning price">Price:$${product.price}</p>
+                    <p class="mx-5 mb-0 align-items-center text-warning price">Price: $${product.price}</p>
                 </div>
                 <div class="col-12 col-md-4 py-3">
                     <button class="btn btn-secondary decrease border-0 rounded-circle" data-id="${product.id}">-</button>
@@ -26,12 +30,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     <button class="btn btn-secondary increase border-0 rounded-circle" data-id="${product.id}">+</button>
                     <button class="btn btn-danger mt-3 remove" data-id="${product.id}">Remove</button>
                 </div>
-                <p class="total-price">Total: $${(product.price * product.quantity).toFixed(2)}</p>
-                
+                <p class="total-price ">Total: $${(product.price * product.quantity).toFixed(2)}</p>
             </div>    
             `;
             checkoutCartItems.appendChild(itemDiv);
+
+            // Add to total price
+            totalPrice += product.price * product.quantity;
         });
+
+        // Display total price for all items
+        totalPriceElement.textContent = `Total Price: $${totalPrice.toFixed(2)}`;
     };
 
     updateCartDisplay();
@@ -102,14 +111,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('checkout-form').addEventListener('submit', function(event) {
         event.preventDefault();
         let email = document.getElementById('inputEmail4').value;
-        let name = document.getElementById('inputName4').value;
+        let password = document.getElementById('inputName4').value;
         let address = document.getElementById('inputAddress').value;
         let address2 = document.getElementById('inputAddress2').value;
         let city = document.getElementById('inputCity').value;
         let state = document.getElementById('inputState').value;
         let zip = document.getElementById('inputZip').value;
         
-        if (!email || !name || !address || !address2 || !city || !state || !zip) {
+        if (!email || !password || !address || !address2 || !city || !state || !zip) {
             Toastify({
                 text: "Please fill in all required fields!",
                 duration: 3000,
@@ -122,8 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const userData = {
-            name: name,
             email: email,
+            password: password,
             address: address,
             address2: address2,
             city: city,
@@ -138,4 +147,3 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = 'home.html';
     });
 });
-
