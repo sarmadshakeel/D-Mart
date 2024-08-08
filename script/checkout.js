@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('checkout-form').addEventListener('submit', function(event) {
         event.preventDefault();
         let email = document.getElementById('inputEmail4').value;
-        let password = document.getElementById('inputPassword4').value;
+        let password = document.getElementById('inputName4').value;
         let address = document.getElementById('inputAddress').value;
         let address2 = document.getElementById('inputAddress2').value;
         let city = document.getElementById('inputCity').value;
