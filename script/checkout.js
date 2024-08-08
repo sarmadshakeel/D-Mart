@@ -131,8 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const userData = {
-            email: email,
             name: name,
+            email: email,
             address: address,
             address2: address2,
             city: city,
