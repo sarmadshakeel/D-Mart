@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             itemDiv.innerHTML = `
             <div class="row product mb-3 ">
                 <div class="col-12 col-md-4 ">
-                    <img src="${product.image}" class="img-fluid my-3 rounded-circle" alt="${product.name}">
+                    <img src="${product.image}" class="img-fluid rounded-circle" alt="${product.name}">
                 </div>
                 <div class="col-12 col-md-4 d-flex justify-content-between align-items-center">
                     <h5 class="d-flex align-items-center">${product.name}</h5>
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <button class="btn btn-secondary decrease border-0 rounded-circle" data-id="${product.id}">-</button>
                     <span class="mx-2">${product.quantity}</span>
                     <button class="btn btn-secondary increase border-0 rounded-circle" data-id="${product.id}">+</button>
-                    <button class="btn btn-danger mt-3 remove" data-id="${product.id}">Remove</button>
+                    <button class="btn btn-danger my-3 remove" data-id="${product.id}">Remove</button>
                 </div>
                 <p class="total-price ">Total: $${(product.price * product.quantity).toFixed(2)}</p>
             </div>    
