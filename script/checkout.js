@@ -1,30 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
     const checkoutCartItems = document.getElementById('checkout-cart-items');
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    if (cart.length === 0) {
-        checkoutCartItems.innerHTML = '<p>Your cart is empty!</p>';
-        return;
-    }
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     const updateCartDisplay = () => {
         checkoutCartItems.innerHTML = ''; // Clear existing items
+        if (cart.length === 0) {
+            checkoutCartItems.innerHTML = '<p>Your cart is empty!</p>';
+            return;
+        }
+
         cart.forEach(product => {
             const itemDiv = document.createElement('div');
             itemDiv.innerHTML = `
             <div class="row product mb-3 ">
                 <div class="col-12 col-md-4 ">
-                    <img src="${product.image}" class="img-fluid my-3 rounded-circle " alt="${product.name}">
+                    <img src="${product.image}" class="img-fluid my-3 rounded-circle" alt="${product.name}">
                 </div>
                 <div class="col-12 col-md-4 d-flex justify-content-between align-items-center">
                     <h5 class="d-flex align-items-center">${product.name}</h5>
-                    <p class="mx-5 mb-0 align-items-center">Price: $${product.price}</p>
+                    <p class="mx-5 mb-0 align-items-center text-warning price">Price:$${product.price}</p>
                 </div>
                 <div class="col-12 col-md-4 py-3">
-                        <button class="btn btn-secondary decrease" data-id="${product.id}">-</button>
-                        <span class="mx-2">${product.quantity}</span>
-                        <button class="btn btn-secondary increase" data-id="${product.id}">+</button>
-                        <button class="btn btn-danger mt-3 remove" data-id="${product.id}">Remove</button>
+                    <button class="btn btn-secondary decrease border-0 rounded-circle" data-id="${product.id}">-</button>
+                    <span class="mx-2">${product.quantity}</span>
+                    <button class="btn btn-secondary increase border-0 rounded-circle" data-id="${product.id}">+</button>
+                    <button class="btn btn-danger mt-3 remove" data-id="${product.id}">Remove</button>
                 </div>
                 <p class="total-price">Total: $${(product.price * product.quantity).toFixed(2)}</p>
             </div>    
@@ -37,32 +37,66 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Event delegation for quantity and remove buttons
     checkoutCartItems.addEventListener('click', (event) => {
-        const target = event.target;
-        const productId = target.getAttribute('data-id');
+        const button = event.target;
+        const id = button.dataset.id;
 
-        if (target.classList.contains('remove')) {
-            // Remove product
-            const updatedCart = cart.filter(product => product.id !== productId);
-            localStorage.setItem('cart', JSON.stringify(updatedCart));
-            updateCartDisplay();
-        } else if (target.classList.contains('increase')) {
-            // Increase quantity
-            const product = cart.find(product => product.id === productId);
-            if (product) {
-                product.quantity++;
-                localStorage.setItem('cart', JSON.stringify(cart));
-                updateCartDisplay();
-            }
-        } else if (target.classList.contains('decrease')) {
-            // Decrease quantity
-            const product = cart.find(product => product.id === productId);
-            if (product && product.quantity > 1) {
-                product.quantity--;
-                localStorage.setItem('cart', JSON.stringify(cart));
-                updateCartDisplay();
-            }
+        if (button.classList.contains('decrease')) {
+            changeQuantity(id, -1);
+        } else if (button.classList.contains('increase')) {
+            changeQuantity(id, 1);
+        } else if (button.classList.contains('remove')) {
+            removeProduct(id);
         }
     });
+
+    function changeQuantity(id, change) {
+        const product = cart.find(item => item.id === id);
+        if (product) {
+            product.quantity += change;
+            if (product.quantity < 1) product.quantity = 1; // Prevent quantity from going below 1
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartDisplay();
+
+            Toastify({
+                text: change > 0 ? "Quantity increased!" : "Quantity decreased!",
+                duration: 2000,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                    background: change > 0 ? "green" : "red",
+                },
+            }).showToast();
+        }
+    }
+
+    function removeProduct(id) {
+        cart = cart.filter(item => item.id !== id);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartDisplay();
+    
+        Toastify({
+            text: "Product removed!",
+            duration: 2000,
+            close: true,
+            gravity: "top",
+            position: "right",
+            stopOnFocus: true,
+            style: {
+                background: "red",
+            },
+        }).showToast();
+    
+        // Check if the cart is empty and redirect to home page
+        if (cart.length === 0) {
+            setTimeout(() => {
+                window.location.href = 'home.html'; // Replace with your home page
+            }); // Redirect after 2 seconds
+        }
+    }
+    
 
     document.getElementById('checkout-form').addEventListener('submit', function(event) {
         event.preventDefault();
