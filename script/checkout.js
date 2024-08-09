@@ -24,11 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     <h5 class="d-flex align-items-center">${product.name}</h5>
                     <p class="mx-5 mb-0 align-items-center text-warning price">Price: $${product.price}</p>
                 </div>
-                <div class="col-12 col-md-4 py-3">
+                <div class="col-12 col-md-4 py-3 button-remove ">
                     <button class="btn btn-secondary decrease border-0 rounded-circle" data-id="${product.id}">-</button>
                     <span class="mx-2">${product.quantity}</span>
                     <button class="btn btn-secondary increase border-0 rounded-circle" data-id="${product.id}">+</button>
-                    <button class="btn btn-danger my-3 remove" data-id="${product.id}">Remove</button>
+                    <i class="fa-solid fa-trash-can remove" data-id="${product.id}"></i>
                 </div>
                 <div class="col-12 col-md-12">
                 <p class="total-price ">Total: $${(product.price * product.quantity).toFixed(2)}</p>
@@ -114,12 +114,12 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
         let email = document.getElementById('inputEmail4').value;
         let name = document.getElementById('inputName4').value;
-        let address = document.getElementById('inputAddress').value;
+        let phone = document.getElementById('inputPhone').value;
         let address2 = document.getElementById('inputAddress2').value;
         let city = document.getElementById('inputCity').value;
         
         
-        if (!email || !name || !address || !address2 || !city) {
+        if (!email || !name || !phone || !address2 || !city) {
             Toastify({
                 text: "Please fill in all required fields!",
                 duration: 3000,
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const userData = {
             name: name,
             email: email,
-            address: address,
+            phone: phone,
             address2: address2,
             city: city,
           
@@ -147,3 +147,8 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = 'home.html';
     });
 });
+
+
+
+
+/// <button class="btn btn-danger my-3"></button>
