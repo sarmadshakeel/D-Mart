@@ -29,8 +29,20 @@
         color: #333;
     }
 
+    .increase{
+      width: 23px;
+      height: 23px;
+      padding: 0px 6px;
+    }
+    .decrease{
+      width: 23px;
+      height: 23px;
+      padding: 0px 6px;
+    }
+
     .img-fluid{
         width: 30%;
+        margin-top: 2rem;
     }
 
     .total-price{
@@ -90,6 +102,30 @@
     .product{
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
+    #total-price{
+      display: block;
+    text-align: center;
+    width: 25%;
+    margin: 35px auto;
+    font-weight: 600;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 25px;
+    }
+    #total-price:hover{
+      background: #525151;
+      color: #f4f4f4;
+    }
+    @media screen and (max-width:767px) {
+      #total-price{
+        width: 100%;
+      }
+    }
+    .button-remove{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
 </style>
 
 <body>
@@ -100,7 +136,7 @@
     <form id="checkout-form">
         <form class="row g-3">
           <div class="col-md-12 mt-3">
-            <label for="inputName4" class="form-label">  First Name</label>
+            <label for="inputName4" class="form-label"> <i class="fa-solid fa-user"></i> First Name</label>
             <input type="text" class="form-control" id="inputName4">
           </div>
             <div class="col-md-12 mt-3">
@@ -108,41 +144,19 @@
               <input type="email" class="form-control" id="inputEmail4">
             </div>
             <div class="col-12 mt-3">
-              <label for="inputAddress" class="form-label"> <i class="fa fa-address-card-o"></i> Address</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              <label for="inputAddress" class="form-label"> <i class="fa-solid fa-square-phone"></i> phone</label>
+              <input type="tel" class="form-control" id="inputPhone" placeholder="[0-9]{3}-[0-9]{2}-[0-9]{3}">
             </div>
             <div class="col-12 mt-3">
-              <label for="inputAddress2" class="form-label"> <i class="fa fa-address-card-o"></i> Address 2</label>
+              <label for="inputAddress2" class="form-label"> <i class="fa fa-address-card-o"></i> Address</label>
               <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
             </div>
-            <div class="row">
-            <div class="col-md-4 mt-3">
+           
+            <div class="col-md-12 mt-3">
               <label for="inputCity" class="form-label"> <i class="fa fa-institution"></i> City</label>
               <input type="text" class="form-control" id="inputCity">
             </div>
-            <div class="col-md-4 mt-5">
-              <label for="inputState" class="form-label">State</label>
-              <select id="inputState" class="form-select">
-                <option selected>Choose...</option>
-                <option>Punjab</option>
-                <option>Sindh</option>
-                <option>Balochistan</option>
-                <option>KPK</option>
-              </select>
-            </div>
-            <div class="col-md-4 mt-3">
-              <label for="inputZip" class="form-label w-50">Zip</label>
-              <input type="text" class="form-control" id="inputZip">
-            </div>
-          </div>
-            <div class="col-12 mt-3">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
-                <label class="form-check-label" for="gridCheck">
-                  Check me out
-                </label>
-              </div>
-            </div>
+          
             <div class="col-12">
               <button type="submit" class="btn btn-primary w-100 mt-4">Confirm Purchse</button>
             </div>
@@ -150,10 +164,10 @@
     </form>
 </div>
 <div id="checkout-cart-items" class="col-12 col-md-6">
-
+ 
 </div>
-
 </div>
+<div id="total-price">Total Price: $0.00</div>
 </div>
 
 

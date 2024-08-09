@@ -19,6 +19,18 @@
 body{
     font-family: 'poppins', sans-serif;
 }
+.menu-btn{
+    color: black;
+    background: none;
+    border: none;
+    font-size: 22px;
+    line-height: 1rem;
+}
+.menu-btn:hover{
+    background: none;
+    border: none;
+    color: #000000;
+}
 .navba-Style{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
@@ -34,9 +46,46 @@ body{
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px !important;
 }
 
+.site-logo img{
+    width: 20%;
+}
+
+@media screen and (max-width:520px) {
+    .site-logo img{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .site-logo img{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .site-logo img{
+        width: 50%;
+    }
+    .icons i{
+        font-size: 10px;
+        padding-top: 0.5rem;
+    }
+}
+@media screen and (max-width:370px) {
+    .site-logo img{
+        width: 60%;
+    }
+}
+
 .icons i{
     font-size: 30px;
     margin-right: 20px;
+}
+
+@media screen and (max-width:600px) {
+    .icons i{
+        font-size: 20px;
+    }
 }
 
 .second-row{
@@ -55,6 +104,7 @@ body{
 
 .first-list a{
     color: white;
+    text-decoration: none;
 }
 
 .second-list{
@@ -637,7 +687,7 @@ in blog dropdown inside it grid-drop */
     padding: auto 0px;
 }
 .tabs-link a{
-    color: #181818;
+    color: #181818 !important;
 }
 @media screen and (max-width:931px) {
     .tabs-link a{
@@ -685,6 +735,11 @@ in blog dropdown inside it grid-drop */
     color: white;
     font-weight: 800;
     padding-top: 1px;
+}
+@media screen and (max-width:767px) {
+    .total-count{
+        right: 58px;
+    }
 }
 .default-btn {
     padding: 12px 25px 10px;
@@ -867,12 +922,12 @@ in blog dropdown inside it grid-drop */
 
 .contact ul li{
     list-style: none;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 2.94;
     color: #868686;
 }
 .contact ul li i{
-   margin-right: 20px;
+   margin-right: 0px;
 }
 .contact h2{
     font-size: 18px;
@@ -884,6 +939,14 @@ in blog dropdown inside it grid-drop */
 .reserved p{
     color: #868686;
     font-size: 12px;
+}
+.payement img{
+    width: 100%;
+}
+@media screen and (max-width:767px){
+    .payement img{
+        width: 25%;
+    }
 }
 /* .line{
     color: #666666 !important;
@@ -897,3 +960,22 @@ in blog dropdown inside it grid-drop */
     font-size: 15px;
     display: flex;
 }
+
+/* offcanvas for navbar */
+
+/* .baroff{
+    font-size:30px;
+    cursor:pointer; 
+    display: none;
+}
+.sidenav{
+    display: none;
+}
+@media screen and (max-width:990px) {
+    .baroff{
+        display: block;
+    }
+    .sidenav{
+        display: block;
+    }
+} */
