@@ -857,8 +857,8 @@ in blog dropdown inside it grid-drop */
     border-radius: 25px;
     text-align: center;
     margin: auto;
-    font-size: 15px;
-    padding-top: 6px;
+    font-size: 12px;
+    padding-top: 8px;
     background: #ffffff;
 }
 .elements i:hover{
