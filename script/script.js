@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             productDiv.className = "col-12 col-md-4 mb-3";
             productDiv.innerHTML = `
                 <div class="card product-card border border-0 position-relative">
-                    <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                    <img src="${product.image}" class="card-img-top w-50 d-block mx-auto" alt="${product.name}">
                     <div class="card-body">
                         <div class="rating1">
                             <input type="radio" id="star1-${product.id}" name="rating-${product.id}" value="1" /><label for="star1-${product.id}" title="1 stars">☆</label>

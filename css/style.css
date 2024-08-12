@@ -339,6 +339,13 @@ in blog dropdown inside it grid-drop */
     line-height: 2.2rem;
     padding: 12px 0px;
 }
+.language-drop  a{
+    text-decoration: none !important;
+}
+#help {
+    text-decoration: none;
+
+}
 .language-list li:hover{
     color: #dd3333;
 }
@@ -364,6 +371,10 @@ in blog dropdown inside it grid-drop */
     margin-left: 30px;
     line-height: 2.2rem;
     padding: 12px 0px;
+}
+.currency-drop a{
+    text-decoration: none;
+
 }
 .currency-list li:hover{
     color: #dd3333;
@@ -686,6 +697,11 @@ in blog dropdown inside it grid-drop */
     text-align: center;
     padding: auto 0px;
 }
+@media screen and (max-width:329px) {
+    .tag1 h2{
+        font-size: 17px;
+    }
+}
 .tabs-link a{
     color: #181818 !important;
 }
@@ -723,9 +739,8 @@ in blog dropdown inside it grid-drop */
 }
 .total-count{
     position: absolute;
-    top: 16px;
-    
-    right: 25px;
+    top: 37px;
+    right: 44px;
     background: red;
     font-size: 12px;
     width: 20px;
@@ -738,9 +753,41 @@ in blog dropdown inside it grid-drop */
 }
 @media screen and (max-width:767px) {
     .total-count{
-        right: 58px;
+        right: 84px;
     }
 }
+@media screen and (max-width:725px) {
+    .total-count{
+        right: 82px;
+        top: 34px;
+    }
+}
+@media screen and (max-width:686px) {
+    .total-count{
+        right: 83px;
+        top: 32px;
+    }
+}
+@media screen and (max-width:666px) {
+    .total-count{
+        right: 82px;
+        top: 30px;
+    }
+}
+@media screen and (max-width:630px) {
+    .total-count{
+        right: 80px;
+        top: 26px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .total-count{
+        right: 59px;
+        top: 7px;
+    }
+}
+
 .default-btn {
     padding: 12px 25px 10px;
     text-align: center;
@@ -846,6 +893,30 @@ in blog dropdown inside it grid-drop */
     font-family: 'poppins', sans-serif;
     font-weight: 700;
 }
+
+@media screen and (max-width:900px) {
+    .first-card h2{
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width:832px) {
+    .first-card h2{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width:410px) {
+    .first-card h2{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:390px) {
+    .first-card h2{
+        font-size: 17px;
+    }
+}
+
 .first-card-text p{
     font-size: 14px;
     font-family: 'poppins', sans-serif;
@@ -860,6 +931,30 @@ in blog dropdown inside it grid-drop */
         color: #ffffff;
         text-decoration: none;
 }
+@media screen and (max-width:900px) {
+    .first-card a{
+        padding: 8px 22px;
+    }
+}
+
+@media screen and (max-width:390px) {
+    .first-card a{
+        padding: 6px 18px;
+    }
+}
+
+@media screen and (max-width:370px) {
+    .first-card a{
+        padding: 3px 9px;
+    }
+    .first-card h2{
+        font-size: 14px;
+    }
+    .first-card p{
+        font-size: 10px;
+    }
+}
+
 .first-card-text a:hover{
     color: #181818;
     background: #ffffff;
@@ -871,6 +966,34 @@ in blog dropdown inside it grid-drop */
     font-family: 'poppins', sans-serif;
     font-weight: 700;
 }
+
+@media screen and (max-width:900px) {
+    .second-card h2{
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width:832px) {
+    .second-card h2{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width:410px) {
+    .second-card h2{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:390px) {
+    .second-card h2{
+        font-size: 17px;
+    }
+}
+
+
+
+
 .second-card-text p{
     font-size: 14px;
     font-family: 'poppins', sans-serif;
@@ -887,12 +1010,33 @@ in blog dropdown inside it grid-drop */
     color: #ffffff;
     text-decoration: none;
 }
+@media screen and (max-width:900px) {
+    .second-card a{
+        padding: 8px 22px;
+    }
+}
 
+@media screen and (max-width:390px) {
+    .second-card a{
+        padding: 6px 18px;
+    }
+}
+@media screen and (max-width:370px) {
+    .second-card a{
+        padding: 3px 9px;
+    }
+    .second-card h2{
+        font-size: 14px;
+    }
+    .second-card p{
+        font-size: 10px;
+    }
+}
 
 /* cart - navigate page  */
 
 .price-btn{
-    width: 30%;
+    width: 50%;
     margin: 0px auto;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -979,3 +1123,22 @@ in blog dropdown inside it grid-drop */
         display: block;
     }
 } */
+
+
+/* cart-js styling */
+
+.decrease-quantity{
+    width: 23px;
+    height: 25px;
+    text-align: center;
+    padding: 2px 7px;
+}
+.increase-quantity{
+    width: 23px;
+    height: 25px;
+    text-align: center;
+    padding: 2px 7px;
+}
+.img-fluid{
+    width: 30%;
+}

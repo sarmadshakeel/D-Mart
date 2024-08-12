@@ -19,21 +19,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
         cart.forEach(product => {
             const itemDiv = document.createElement('div');
-            itemDiv.className = 'cart-item mb-3 border border-2 border-black rounded mx-auto py-3';
+            itemDiv.className = 'col-12 col-md-6 cart-item mb-3 border border-2 border-black rounded mx-auto py-3';
             itemDiv.innerHTML = `
-                <div class="col-4 m-auto">
+                <div class=" m-auto">
                     <img src="${product.image}" class="img-fluid" alt="${product.name}">
                 </div>
-                <div class="col-4 m-auto">
-                    <h5>${product.name}</h5>
+                <div class="m-auto">
+                    <h5 style="font-size: 1rem;">${product.name}</h5>
                     <p class="text-warning">$${product.price}</p>
-                    <div class="">
-                        <button class="btn btn-sm btn-danger decrease-quantity" data-id="${product.id}">-</button>
+                    <div class=" d-flex justify-content-center">
+                        <button class="btn btn-sm btn-danger rounded-circle decrease-quantity" data-id="${product.id}">-</button>
                         <span class="mx-2">${product.quantity}</span>
-                        <button class="btn btn-sm btn-primary increase-quantity" data-id="${product.id}">+</button>
-                        <p>Total: $${calculateTotalPrice(product).toFixed(2)}</p>
-                        <button class="btn btn-sm btn-danger remove-product" data-id="${product.id}">Remove</button>
-                    </div>
+                        <button class="btn btn-sm btn-primary rounded-circle increase-quantity" data-id="${product.id}">+</button>
+                        
+                        <i class="fa-solid fa-trash-can remove-product mt-1 mx-3"data-id="${product.id}"></i>
+                        </div>
+                        <p class="mt-3">Total: $${calculateTotalPrice(product).toFixed(2)}</p>
                 </div>
             `;
             cartItems.appendChild(itemDiv);
@@ -140,3 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
     showCart();
     document.getElementById('purchase-btn').addEventListener('click', purchaseProducts);
 });
+
+
+///  <button class="btn btn-sm btn-danger remove-product" data-id="${product.id}">Remove</button>
