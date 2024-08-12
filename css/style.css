@@ -1152,7 +1152,6 @@ in blog dropdown inside it grid-drop */
 
 .price{
     font-size: 15px;
-    display: flex;
 }
 
 /* offcanvas for navbar */
@@ -1192,4 +1191,9 @@ in blog dropdown inside it grid-drop */
 .img-fluid{
     width: 30%;
 }
+
+
+
+
+
 
