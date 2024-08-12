@@ -116,6 +116,7 @@ body{
 }
 .second-list a{
     color: white;
+    text-decoration: none;
 }
 
 /* drop-user list  */
@@ -875,7 +876,7 @@ in blog dropdown inside it grid-drop */
 } */
 .card:hover  .elements{
     display: block;
-    flex-direction: column-reverse;
+    flex-direction: column;
     display: flex;
     justify-content: space-evenly;
     opacity: 1;
@@ -1053,6 +1054,16 @@ in blog dropdown inside it grid-drop */
     color: #868686;
     max-width: 247px;
 }
+@media screen and (max-width:767px) {
+    .img-desc{
+        text-align: center;
+    }
+    .img-desc p{
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+}
 .timing ul li{
     list-style: none;
     font-size: 12px;
@@ -1062,6 +1073,15 @@ in blog dropdown inside it grid-drop */
 .timing h2{
     font-size: 18px;
     line-height: 1.84;
+}
+
+@media screen and (max-width:767px) {
+    .timing{
+        text-align: center;
+        margin: 10px auto;
+        text-align: center;
+    }
+  
 }
 
 .contact ul li{
@@ -1077,9 +1097,39 @@ in blog dropdown inside it grid-drop */
     font-size: 18px;
     line-height: 1.84;
 }
+
+@media screen and (max-width:767px) {
+    .contact{
+        text-align: center;
+        margin: 10px auto;
+        text-align: center;
+    }
+  
+}
+
 .logos i{
     margin: 0 10px;
 }
+
+@media screen and (max-width:767px) {
+    .logos{
+        text-align: center;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .reserved{
+        text-align: center;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .payement{
+        text-align: center;
+        margin: 10px auto;
+        text-align: center;
+    }
+  
+}
+
 .reserved p{
     color: #868686;
     font-size: 12px;
@@ -1089,7 +1139,7 @@ in blog dropdown inside it grid-drop */
 }
 @media screen and (max-width:767px){
     .payement img{
-        width: 25%;
+        width: 56%;
     }
 }
 /* .line{
