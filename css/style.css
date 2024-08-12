@@ -739,8 +739,8 @@ in blog dropdown inside it grid-drop */
 }
 .total-count{
     position: absolute;
-    top: 37px;
-    right: 44px;
+    top: 16px;
+    right: 23px;
     background: red;
     font-size: 12px;
     width: 20px;
@@ -753,38 +753,38 @@ in blog dropdown inside it grid-drop */
 }
 @media screen and (max-width:767px) {
     .total-count{
-        right: 84px;
+        right: 62px;
     }
 }
 @media screen and (max-width:725px) {
     .total-count{
-        right: 82px;
-        top: 34px;
+        right: 65px;
+        top: 14px;
     }
 }
 @media screen and (max-width:686px) {
     .total-count{
-        right: 83px;
-        top: 32px;
+        right: 64px;
+        top: 10px;
     }
 }
 @media screen and (max-width:666px) {
     .total-count{
-        right: 82px;
-        top: 30px;
+        right: 64px;
+        top: 8px;
     }
 }
 @media screen and (max-width:630px) {
     .total-count{
-        right: 80px;
-        top: 26px;
+        right: 64px;
+        top: 5px;
     }
 }
 
 @media screen and (max-width:575px) {
     .total-count{
-        right: 59px;
-        top: 7px;
+        right: 58px;
+        top: 6px;
     }
 }
 
@@ -851,21 +851,21 @@ in blog dropdown inside it grid-drop */
 }
 .elements i{
     border: 1px solid rgb(34, 34, 34);
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 25px;
     text-align: center;
     margin: auto;
-    font-size: 20px;
-    padding-top: 10px;
+    font-size: 15px;
+    padding-top: 6px;
     background: #ffffff;
 }
 .elements i:hover{
     background: #dd3333;
     color: #ffffff;
     border-color: #181818;
-    font-size: 17px;
-    padding-top: 10px;
+    font-size: 12px;
+    padding-top: 8px;
 }
 /* .card{
     transition: .5s ease;
@@ -1142,3 +1142,4 @@ in blog dropdown inside it grid-drop */
 .img-fluid{
     width: 30%;
 }
+
