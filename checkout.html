@@ -28,7 +28,9 @@
         text-align: center;
         color: #333;
     }
-
+    .remove{
+      margin-left: 20px;
+    }
     .increase{
       width: 23px;
       height: 23px;
@@ -42,7 +44,8 @@
 
     .img-fluid{
         width: 30%;
-        margin-top: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .total-price{
@@ -121,11 +124,7 @@
         width: 100%;
       }
     }
-    .button-remove{
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-    }
+    
 </style>
 
 <body>
@@ -145,7 +144,7 @@
             </div>
             <div class="col-12 mt-3">
               <label for="inputAddress" class="form-label"> <i class="fa-solid fa-square-phone"></i> phone</label>
-              <input type="tel" class="form-control" id="inputPhone" placeholder="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+              <input type="tel" class="form-control" id="inputPhone" placeholder="">
             </div>
             <div class="col-12 mt-3">
               <label for="inputAddress2" class="form-label"> <i class="fa fa-address-card-o"></i> Address</label>

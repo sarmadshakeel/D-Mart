@@ -20,11 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="col-12 col-md-4 ">
                     <img src="${product.image}" class="img-fluid rounded-circle" alt="${product.name}">
                 </div>
-                <div class="col-12 col-md-4 d-flex justify-content-between align-items-center">
-                    <h5 class="d-flex align-items-center">${product.name}</h5>
-                    <p class="mx-5 mb-0 align-items-center text-warning price">Price: $${product.price}</p>
+                <div class="col-12 col-md-4 d-block pt-4 justify-content-between align-items-center">
+                    <h5 class=" align-items-center">${product.name}</h5> 
+                    <p class=" text-center text-warning price">Price: $${product.price}</p>
                 </div>
-                <div class="col-12 col-md-4 py-3 button-remove ">
+                <div class="col-12 col-md-4 py-5 button-remove ">
                     <button class="btn btn-secondary decrease border-0 rounded-circle" data-id="${product.id}">-</button>
                     <span class="mx-2">${product.quantity}</span>
                     <button class="btn btn-secondary increase border-0 rounded-circle" data-id="${product.id}">+</button>
@@ -112,14 +112,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById('checkout-form').addEventListener('submit', function(event) {
         event.preventDefault();
-        let email = document.getElementById('inputEmail4').value;
         let name = document.getElementById('inputName4').value;
+        let email = document.getElementById('inputEmail4').value;
         let phone = document.getElementById('inputPhone').value;
         let address2 = document.getElementById('inputAddress2').value;
         let city = document.getElementById('inputCity').value;
         
         
-        if (!email || !name || !phone || !address2 || !city) {
+        if (!name || !email || !phone || !address2 || !city) {
             Toastify({
                 text: "Please fill in all required fields!",
                 duration: 3000,
@@ -137,7 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
             phone: phone,
             address2: address2,
             city: city,
-          
         };
 
         localStorage.setItem('userData', JSON.stringify(userData));

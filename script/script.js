@@ -25,6 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const productDiv = document.createElement("div");
             productDiv.className = "col-12 col-md-4 mb-3";
             productDiv.innerHTML = `
+
+                
+
                 <div class="card product-card border border-0 position-relative">
                     <img src="${product.image}" class="card-img-top w-50 d-block mx-auto" alt="${product.name}">
                     <div class="card-body">
@@ -40,8 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                     <div class="elements">
                         <i class="fa-solid fa-right-left mt-2"></i>
-                        <i class="fa-solid fa-cart-shopping mt-2 add-to-cart" type="button" data-id="${product.id}" data-image="${product.image}" data-name="${product.name}" data-price="${product.price.replace('$', '')}"></i>
                         <i class="fa-regular fa-heart mt-2"></i>
+                        <i class="fa-solid fa-cart-shopping mt-2 add-to-cart" type="button" data-id="${product.id}" data-image="${product.image}" data-name="${product.name}" data-price="${product.price.replace('$', '')}" ></i>
                         <i class="fa-regular fa-eye mt-2"></i>
                     </div>
                 </div>
@@ -113,6 +116,40 @@ document.addEventListener("DOMContentLoaded", () => {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         document.querySelector('.total-count').textContent = cart.reduce((total, product) => total + product.quantity, 0);
     }
+
+
+    function addToCart(event) {
+        const button = event.target;
+        const id = button.dataset.id;
+        const image = button.dataset.image;
+        const name = button.dataset.name;
+        const price = button.dataset.price;
+    
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const product = { id, image, name, price };
+    
+        // Check if product already in cart
+        const existingProduct = cart.find(item => item.id === id);
+        if (existingProduct) {
+            existingProduct.quantity++;
+        } else {
+            product.quantity = 1;
+            cart.push(product);
+        }
+    
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+    
+        // Show dashboard modal with product details
+        document.getElementById('added-product-name').textContent = name;
+        document.getElementById('added-product-price').textContent = price;
+        document.getElementById('added-product-image').src = image;
+        const dashboardModal = new bootstrap.Modal(document.getElementById('dashboardModal'));
+        dashboardModal.show();
+    }
+    
+
+
 
     function showCart() {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];

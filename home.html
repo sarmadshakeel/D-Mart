@@ -361,6 +361,8 @@
                     </div>
                 </div>
             </div>
+
+            
             <div class="row">
                 <div class="col">
                     <div class="tab-content" id="myTabContent">
@@ -379,27 +381,26 @@
         </div>
 
 
-
-        <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+        <div class="modal" id="dashboardModal" tabindex="-1" aria-labelledby="dashboardModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="cartModalLabel">Cart</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                        <h5 class="modal-title" id="dashboardModalLabel">Product Added to Cart</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div id="cart-items"></div>
+                        <p id="added-product-name"></p>
+                        <p id="added-product-price"></p>
+                        <img id="added-product-image" src="" alt="" class="img-fluid">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="purchase-btn">Purchase</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <a href="cart.html" class="btn btn-primary">Checkout</a>
                     </div>
                 </div>
             </div>
         </div>
-
+        
 
         
 
