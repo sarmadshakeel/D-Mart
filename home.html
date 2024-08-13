@@ -381,26 +381,45 @@
         </div>
 
 
-        <div class="modal" id="dashboardModal" tabindex="-1" aria-labelledby="dashboardModalLabel" aria-hidden="true">
+        <!-- <div class="modal" id="dashboardModal" tabindex="-1" aria-labelledby="dashboardModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="dashboardModalLabel">Product Added to Cart</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <p id="added-product-name"></p>
-                        <p id="added-product-price"></p>
+                    <div class="modal-body text-center border border-dark w-50 mx-auto my-5">
+                        <p id="added-product-name" class="text-danger"></p>
+                        <p id="added-product-price" class="text-warning"></p>
                         <img id="added-product-image" src="" alt="" class="img-fluid">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <a href="cart.html" class="btn btn-primary">Checkout</a>
+                        
+                        <a href="cart.html" class="btn btn-primary">Purchase</a>
+                        <a href="checkout.html" class="btn btn-danger">Checkout</a>
                     </div>
                 </div>
             </div>
         </div>
-        
+
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button> -->
+
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Shopping Cart Product</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body text-center" id="cart-offcanvas-items">
+                <img id="added-product-image" src="" alt="" class="img-fluid">
+                <p id="added-product-name" class="text-danger"></p>
+                <p id="added-product-price" class="text-warning"></p>
+            </div>
+            <div class="offcanavs-footer mb-5 text-center d-grid mx-auto" >      
+                <a href="cart.html" class="btn btn-primary mb-3  w-100 py-2 px-5">View Cart</a>
+                <a href="checkout.html" class="btn btn-danger  w-100">Checkout</a>
+            </div>
+            </div>
+                    
 
         
 
