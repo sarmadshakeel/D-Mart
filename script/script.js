@@ -141,13 +141,62 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCartCount();
     
         // Show dashboard modal with product details
-        document.getElementById('added-product-name').textContent = name;
-        document.getElementById('added-product-price').textContent = price;
-        document.getElementById('added-product-image').src = image;
-        const dashboardModal = new bootstrap.Modal(document.getElementById('dashboardModal'));
+        // document.getElementById('added-product-name').textContent = name;
+        // document.getElementById('added-product-price').textContent = price;
+        // document.getElementById('added-product-image').src = image;
+
+        const dashboardModal = new bootstrap.Offcanvas(document.getElementById('offcanvasWithBothOptions'));
         dashboardModal.show();
+        renderCartOffcanvas();
     }
     
+
+    function removeFromCart(event) {
+        const button = event.target;
+        const id = button.dataset.id;
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart = cart.filter(item => item.id !== id); // Remove item from cart
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        renderCartOffcanvas(); // Refresh the offcanvas display
+    }
+
+    function renderCartOffcanvas() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartItems = document.getElementById('cart-offcanvas-items');
+        cartItems.innerHTML = "";
+
+        if (cart.length === 0) {
+            cartItems.innerHTML = "<p>Your cart is empty</p>";
+            return;
+        }
+
+        cart.forEach(product => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = "cart-item mb-3 ";
+            itemDiv.innerHTML = `
+              <div class="d-flex align-items-center justify-content-evenly">
+                  <img src="${product.image}" class="img-thumbnail" style="width: 50px; border: none;" alt="${product.name}">
+                  <div class="ms-2 d-block text-center mt-3">
+                      <h6>${product.name}</h6>
+                      <p>Price: $${product.price} x ${product.quantity}</p>
+                  </div>
+                  
+                  <i class="fa-solid fa-xmark remove-product" id="close-btn"  data-id="${product.id}" ></i>
+              </div>
+              
+           
+            `;
+            cartItems.appendChild(itemDiv);
+        });
+
+        // Add event listeners for remove buttons
+        document.querySelectorAll('.remove-product').forEach(button => {
+            button.addEventListener('click', removeFromCart);
+        });
+    }
+
 
 
 
@@ -189,7 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("contact-tab").addEventListener("click", () => renderProducts(products.filter(product => product.topSeller > 7), "contact-products"));
 
     // Event listener for cart modal
-    document.getElementById('cartModal').addEventListener('show.bs.modal', showCart);
+    
 });
 
 
